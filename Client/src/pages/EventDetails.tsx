@@ -13,6 +13,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { toast } from '@/hooks/use-toast';
 import { Loader2, Calendar, MapPin, Users, Trophy, Tag, ArrowLeft } from 'lucide-react';
 import type { EventWithParticipants } from '@/types/api';
+import { buildSignInPath } from '@/lib/auth-redirect';
 import Navbar from '@/components/Navbar';
 
 export default function EventDetails() {
@@ -62,7 +63,7 @@ export default function EventDetails() {
         description: 'Please sign in to register for events',
         variant: 'destructive',
       });
-      navigate('/signin');
+      navigate(buildSignInPath(window.location.pathname));
       return;
     }
 

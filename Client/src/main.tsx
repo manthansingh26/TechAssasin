@@ -46,7 +46,9 @@ if (!PUBLISHABLE_KEY) {
     <StrictMode>
       <ClerkProvider 
         publishableKey={PUBLISHABLE_KEY} 
-        afterSignOutUrl="/" 
+        afterSignOutUrl="/"
+        signInFallbackRedirectUrl="/dashboard"
+        signUpFallbackRedirectUrl="/edit-profile"
         appearance={{ baseTheme: dark }}
       >
         <App />

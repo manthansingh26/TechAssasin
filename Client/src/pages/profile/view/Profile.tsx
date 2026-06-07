@@ -34,8 +34,7 @@ export default function Profile() {
   useEffect(() => {
     if (!isLoaded) return;
 
-    if (!userId) {
-      // Pass the current path as redirectUrl so Clerk brings them back after signing in
+    if (!userId && isOwnProfile) {
       const currentPath = window.location.pathname;
       navigate(`/signin?redirect_url=${encodeURIComponent(currentPath)}`);
       return;

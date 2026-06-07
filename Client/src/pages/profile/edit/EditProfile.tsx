@@ -13,6 +13,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent } from '@/components/ui/card';
 import { Switch } from '@/components/ui/switch';
 import { toast } from '@/hooks/use-toast';
+import { buildSignInPath } from '@/lib/auth-redirect';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { ImageCropperModal } from '@/components/ui/ImageCropperModal';
@@ -94,7 +95,7 @@ export default function EditProfile() {
   useEffect(() => {
     if (!isLoaded) return;
     if (!userId) {
-      navigate('/signin');
+      navigate(buildSignInPath('/edit-profile'));
       return;
     }
 

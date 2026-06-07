@@ -110,6 +110,7 @@ const storyBlocks = [
     title: "Your builder profile stays alive",
     body: "Collect your work, skills, links, missions, and shipped projects in one place that keeps growing with you.",
     cta: "Create profile",
+    href: "/signup",
     mockup: "profile",
   },
   {
@@ -118,6 +119,7 @@ const storyBlocks = [
     title: "A showcase of serious projects",
     body: "Give weekend experiments, hackathon builds, and open-source work a space where mentors and peers can understand the craft behind them.",
     cta: "Add project",
+    href: "/projects",
     mockup: "projects",
   },
   {
@@ -126,6 +128,7 @@ const storyBlocks = [
     title: "Your portal to build missions",
     body: "Browse missions, join squads, submit proof, receive feedback, and keep moving without losing momentum.",
     cta: "Explore missions",
+    href: "/missions",
     mockup: "missions",
   },
 ];
@@ -436,7 +439,7 @@ const BuilderStorySection = () => (
                 {block.body}
               </p>
               <Link
-                to="/signup"
+                to={block.href}
                 className="mt-7 inline-flex h-12 items-center gap-2 rounded bg-blue-50 px-5 text-[1.05rem] font-black text-blue-600 transition-colors hover:bg-blue-100"
               >
                 {block.cta} <ArrowRight className="h-5 w-5" />

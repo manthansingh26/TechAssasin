@@ -25,6 +25,7 @@ import {
 import type { Profile } from '@/types/api';
 import Navbar from '@/components/Navbar';
 import OnboardingChecklist from '@/components/OnboardingChecklist';
+import { buildSignInPath } from '@/lib/auth-redirect';
 
 export default function Dashboard() {
   const navigate = useNavigate();
@@ -43,7 +44,7 @@ export default function Dashboard() {
       fetchData();
     } else {
       setIsLoading(false);
-      navigate('/signin');
+      navigate(buildSignInPath('/dashboard'));
     }
   }, [navigate, isLoaded, userId]);
 

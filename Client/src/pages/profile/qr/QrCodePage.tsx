@@ -8,6 +8,7 @@ import { api } from "@/lib/api-client";
 import { useToast } from "@/components/ui/use-toast";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { buildSignInPath } from "@/lib/auth-redirect";
 
 export default function QrCodePage() {
   const { isLoaded, isSignedIn } = useAuth();
@@ -19,7 +20,7 @@ export default function QrCodePage() {
 
   useEffect(() => {
     if (isLoaded && !isSignedIn) {
-      navigate("/signin");
+      navigate(buildSignInPath("/qr"));
       return;
     }
 

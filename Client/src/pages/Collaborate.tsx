@@ -77,21 +77,21 @@ const interestOptions: Array<{ value: CollaborationInterest; label: string }> = 
 ];
 
 const partnerHighlights = [
-  // {
-  //   icon: Target,
-  //   title: "Reach builders",
-  //   body: "Connect with students who are already learning, shipping, and joining real missions.",
-  // },
-  // {
-  //   icon: Users,
-  //   title: "Run programs",
-  //   body: "Launch workshops, hackathons, campus events, mentorship tracks, and product feedback loops.",
-  // },
-  // {
-  //   icon: Sparkles,
-  //   title: "Create outcomes",
-  //   body: "Build hiring pipelines, brand presence, sponsorship value, and student innovation together.",
-  // },
+  {
+    icon: Target,
+    title: "Reach builders",
+    body: "Connect with students who are already learning, shipping, and joining real missions.",
+  },
+  {
+    icon: Users,
+    title: "Run programs",
+    body: "Launch workshops, hackathons, campus events, mentorship tracks, and product feedback loops.",
+  },
+  {
+    icon: Sparkles,
+    title: "Create outcomes",
+    body: "Build hiring pipelines, brand presence, sponsorship value, and student innovation together.",
+  },
 ];
 
 const optional = (value: string) => {
